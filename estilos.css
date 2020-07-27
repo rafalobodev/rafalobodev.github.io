@@ -1,0 +1,58 @@
+body{/*corpo de pagina*/
+	background-image:URL("corpo.gif");/*mudar corpo fundo por um gif*/
+	overflow-x:hidden;/*x e y:tira a barra de rolagem da tela, pois a bomba ta passando da tela*/
+	overflow-y:hidden;
+	background-color:#fff;/*cor de fundo escolhida branca*/
+}
+#medidorPlaneta{/*id do planeta*/
+	border:2px solid #000;/*borda da barra do planeta*/
+	width:300px;/*comprimento barra planeta*/
+	height:20px;
+	background-color:red;/*cor de fundo da barra vermelha*/
+}
+#barraPlaneta{
+	width:300px;
+	height:20px;
+	background-color:#66f;/*cor de fora azul da barra*/
+}
+.navJog{/*class: nave do jogador*/
+	width:40px;/*tamanho da nave largura*/
+	height:40px;/*tamanho altura*/
+	background-image:URL("nave_jog.gif");/*inserir o gif da nave no jogo,,gif criado photoshop*/
+	position:absolute;/*para movimentar a nave coloca em absolute*/
+}
+.bomba{/*classe bomba criada*/
+	width:24px;/*largura e altura da imagem da bomba*/
+	height:40px;
+	background-image:URL("bomba.gif");/*imagem da bomba,,git de animação feita no photoshop cs6*/
+	position:absolute;/*para controlar position fica em absolute*/
+}
+.tiroJog{/*class criando o tiro do jogo da nave*/
+	width:6px;/*6px tiro pequeno*/
+	height:6px;
+	background-color:red;/*cor da bomba do jogo*/
+	border-radius:10px;/*border radius para deixar o tiro redondo*/
+	position:absolute;
+}
+.explosaoChao{/*class explosão de chão */
+	width:55px;/*coloca largura mesmo tamanho da imagem da explosão*/
+	height:57px;/*altura msm imagem tbm*/
+	position:absolute;/*absolute sempre*/
+}
+.explosaoAr{/*class explosão ar quando tiro atinge*/
+	width:70px;
+	height:70px;
+	position:absolute;
+}
+.telaMsg{/*class mostrar mensagem vitoria e derrota e começar jogo*/
+	position:absolute; 
+	margin-left:-25%;/*centralizar msg iniciar*/
+	top:50px;/*centralizando..*/
+	left:50%;
+	width:720px;/*tamanho da imagem*/
+	height:621px;
+	display: none;/*display: tela começa oculta, na hora de clicar jogar sumir a tela*/
+}
+#painel{
+	color: purple;/*muda a cor das letras planeta e comtagem de bombas da linha 12 protecttheplanet.html*/
+}
