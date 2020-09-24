@@ -254,13 +254,13 @@ function reinicia(){//reinicia function para jogar novamente
 	telaMsg.style.display="none";//ocultar a tela de msg
 	clearInterval(tmpCriaIni);
 	cancelAnimationFrame(frames);//cancelar frames animaçoes tbm
-	vidaPlaneta=300;//volta a vida do planeta a 300 max,,diminuindo e aumentando aqui a barra aumente ou diminui em total 300
+	vidaPlaneta=350;//volta a vida do planeta a 300 max,,diminuindo e aumentando aqui a barra aumente ou diminui em total 300
 	pjx=tamTelaW/2;//posição jogador volta no meio da tela,, telawdividida por 2
 	pjy=tamTelaH/2;//posição y no centro tbm
 	jog.style.top=pjy+"px";//posição
 	jog.style.left=pjx+"px";
 	velB=3;//velocidade bomba
-	contBombas=150;
+	contBombas=100;
 	freqCriaBomba=1700;
 	jogo=true;
 	tmpCriaIni=setInterval(criaBomba,freqCriaBomba);//intervalo de tempo q cria a bomba
@@ -273,7 +273,7 @@ function inicia(){//inicializar o game
 	//Inicializações do game
 	tamTelaW=window.innerWidth;//incializaçoes da tela,,variavel guarda distancimento da tela largura
 	tamTelaH=window.innerHeight;//
-	vidaPlaneta=300;//quantidade hp vida planeta tem
+	vidaPlaneta=350;//quantidade hp vida planeta tem
 	barraPlaneta=document.getElementById("barraPlaneta");//barra planeta q ta no html do jogo
 	barraPlaneta.style.width=vidaPlaneta+"px";//style csss barraplaneta. largura recebe vidaplaneta+pixel
 	painelContBombas=document.getElementById("contBombas");
@@ -297,7 +297,7 @@ function inicia(){//inicializar o game
 
 	//Inicializações das Bombas
 	velB=3;//velocidade da bomba 3
-	contBombas=150;//contagem 150 bombas no total
+	contBombas=100;//contagem 150 bombas no total
 	freqCriaBomba=1700;//variavel frequencia criação de bombas
 	tmpCriaIni=setInterval(criaBomba,freqCriaBomba);//intervalo de tempo q cria a bomba setinterval
 	painelContBombas.innerHTML="Contagem de Bombas: "+contBombas;
