@@ -260,7 +260,7 @@ function reinicia(){//reinicia function para jogar novamente
 	jog.style.top=pjy+"px";//posição
 	jog.style.left=pjx+"px";
 	velB=3;//velocidade bomba
-	contBombas=100;
+	contBombas=50;
 	freqCriaBomba=1700;
 	jogo=true;
 	tmpCriaIni=setInterval(criaBomba,freqCriaBomba);//intervalo de tempo q cria a bomba
@@ -297,7 +297,7 @@ function inicia(){//inicializar o game
 
 	//Inicializações das Bombas
 	velB=3;//velocidade da bomba 3
-	contBombas=100;//contagem 150 bombas no total
+	contBombas=50;//contagem 150 bombas no total
 	freqCriaBomba=1700;//variavel frequencia criação de bombas
 	tmpCriaIni=setInterval(criaBomba,freqCriaBomba);//intervalo de tempo q cria a bomba setinterval
 	painelContBombas.innerHTML="Contagem de Bombas: "+contBombas;
