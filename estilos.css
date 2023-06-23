@@ -53,6 +53,58 @@ body{/*corpo de pagina*/
 	height:621px;
 	display: none;/*display: tela começa oculta, na hora de clicar jogar sumir a tela*/
 }
+.btnJogar {
+	background-color:rgb(255, 0, 0);
+}
 #painel{
 	color: purple;/*muda a cor das letras planeta e comtagem de bombas da linha 12 protecttheplanet.html*/
 }
+
+/*-------------controles botoes-----------------*/
+
+.game-container {
+	position: relative;
+	width: 100%;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	opacity: 0.6;
+  }
+
+  /* .movement-buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+  } */
+
+  #upButton {
+	margin-bottom: 20px;
+	margin-left: 25px;
+  }
+
+  .left-right-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 100px;
+  }
+
+  #downButton {
+	margin-left: 25px;
+	/* margin-bottom: 0px; */
+  }
+
+  button {
+	width: 50px;
+	height: 50px;
+	background-color: #999;
+	border: none;
+	margin: 2px;
+  }
+  
+  #shootButton {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	opacity: 0.6;
+  }

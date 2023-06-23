@@ -37,6 +37,54 @@ function teclaUp(){/*tecla para movimentar o jogo- interceptar as teclas-up: tec
 	}
 }
 
+/*------------------------------------botoes controlam a nave------------------------------------------------- */
+function moverCima() {
+    diryJ = -1;
+}
+
+function moverBaixo() {
+    diryJ = 1;
+}
+
+function moverEsquerda() {
+    dirxJ = -1;
+}
+
+function moverDireita() {
+    dirxJ = 1;
+}
+
+function pararMovimento() {
+	dirxJ = 0;
+	diryJ = 0; 
+}
+
+
+function atirarK() {
+	var tiro = document.createElement("div");
+	var som=document.createElement("audio");
+	var attClass = document.createAttribute("class");
+	var attStyle = document.createAttribute("style");
+	var att3=document.createAttribute("src");/*atributo 3 src aponta a imagem */
+	var att4=document.createAttribute("id");
+	
+	attClass.value = "tiroJog";
+	attStyle.value = "top:" + pjy + "px;left:" + pjx + "px;";//"top:" + pjy + "px;left:" + pjx + "px;"
+	att3.value="tiro.wav?"+new Date();
+	att4.value="som"+isom;
+	
+	som.setAttributeNode(att3);
+	som.setAttributeNode(att4);
+	tiro.appendChild(som);
+	tiro.setAttributeNode(attClass);
+	tiro.setAttributeNode(attStyle);
+	
+	document.body.appendChild(tiro);
+	document.getElementById("som"+isom).play();
+	isom++;
+  }
+/*------------------------------------------------------------------------------------- */
+
 function criaBomba(){//criar a bomba caindo
 	if(jogo){//if se o jogo estiver rolando cria a bom
 		var x=Math.random()*tamTelaW;//posição aleatoriamente q a bomba cai*tamanho largura da tela
@@ -279,7 +327,7 @@ function inicia(){//inicializar o game
 	painelContBombas=document.getElementById("contBombas");
 	telaMsg=document.getElementById("telaMsg");//associação da tela div dentro da variavel ta oculta
 	document.getElementById("btnJogar").addEventListener("click",reinicia);//botão jogar click reiniciar addevent
-	telaMsg.style.backgroundImage="url('intro.jpg')";//tela de introdução img 
+	telaMsg.style.backgroundImage="url('intro.png')";//tela de introdução img 
 	telaMsg.style.display="block";//muda display none( retira o elemento do layout da página.) para block(rendeziza como bloco)
 	
 	//Inicializações do jogador

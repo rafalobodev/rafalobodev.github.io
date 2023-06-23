@@ -15,6 +15,19 @@
 				<div id="barraPlaneta"></div><!--barra do planeta de vida-->
 			</div>
 			<div id="contBombas"></div><!--contagem de bombas no jogo-->
+			<div class="game-container">
+				<div class="movement-buttons">
+					<button id="upButton" ontouchstart="moverCima()" ontouchend="pararMovimento()">Cima</button>
+					<br>
+				<div class="left-right-buttons"></div>
+					<button id="leftButton" ontouchstart="moverEsquerda()" ontouchend="pararMovimento()">Esquerda</button>
+					<button id="rightButton" ontouchstart="moverDireita()" ontouchend="pararMovimento()">Direita</button>
+				</div>
+					<br>
+					<button id="downButton" ontouchstart="moverBaixo()" ontouchend="pararMovimento()">Baixo</button>
+				</div>
+				<button id="shootButton" ontouchstart="atirarK()">Atirar</button>
+			</div>
 		</div>
 		<div id="naveJog" class="navJog"></div><!--nave do jogador q controlaremos-->
 		<div id="telaMsg" class="telaMsg"><!--div Msg mostra tela vitoria e derrota-->
